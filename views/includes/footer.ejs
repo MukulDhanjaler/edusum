@@ -1,0 +1,39 @@
+<style>
+    footer {
+        background-color: #121212; 
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0.6rem 0; 
+        text-align: center;
+        font-size: 0.85rem; 
+        color: #cfcfcf;
+        margin-top: 2rem; 
+        line-height: 1.4; 
+    }
+
+    .f-links {
+        margin-top: 0.3rem; 
+    }
+
+    .f-links a {
+        margin: 0 8px;
+        color: #a78bfa; 
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
+        font-size: 0.85rem;
+    }
+
+    .f-links a:hover {
+        color: #c4b5fd;
+        text-decoration: underline;
+    }
+</style>
+
+<footer>
+    <div>&copy; <%= new Date().getFullYear() %> EDU-Summarize | All Rights Reserved</div>
+    <div class="f-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+    </div>
+</footer>
