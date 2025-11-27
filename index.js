@@ -4,6 +4,7 @@ const express = require("express");
 const ejsMate = require('ejs-mate')
 const mongoose = require("mongoose");
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const flash = require("connect-flash");
 const LocalStrategy = require("passport-local");
@@ -32,6 +33,10 @@ app.use(
         secret: process.env.SESSION_SECRET || "defaultsecret",
         resave: false,
         saveUninitialized: false,
+        store: MongoStore.create({
+            mongoUrl: process.env.MONGO_URL,
+            touchAfter: 24 * 3600
+        })
     })
 );
 
